@@ -20,9 +20,67 @@ theme: Ostrich, 1
 
 ---
 
+# Part I: A Past of Design
+
+^ If we're going to talk about how to improve our designs, let's talk about some design-related ideas.
+
+---
+
+![inline](images/screwdriver.png)
+
+^ What is this? What is it for? Is it obvious from looking at it what it does? How it does what it does?
+
+---
+
+# Affordance
+
+^ Perceptual psychologist James Gibson coined the term affordance in 1966. He used it do describe how an actor (person, animal etc) would see the actional properties of the world around them. Part of nature: not necessarily visible. Open terrain affords running. Trees afford hiding. They afford climbing. They might afford sustenance to some actors (not necessarily visible!)
+
+---
+
+# Perceived Affordance
+
+^ Don Norman appropriated the term for his book, "The Psychology of Everyday Things". He later clarified that he should have used "Perceived Affordance" as his term of art: designers care that someone perceives something is possible more than whether it is.
+
+^ He has argued, for example, that a button on a computer screen affords touching, whether the computer is a touch-screen or not. But what we might care about is whether we believe touching the button will cause an action, and what action that will be.
+
+---
+
+![inline](images/floppy-disk.png)
+
+^ So, if you saw this on a button in an app or web page with which you'd interacted, you know what the affordance is. You've been conditioned to see that this is the affordance to save what you have done. (This despite the fact that some of the youngest people here have never seen or held one of these.)
+
+---
+
+[.build-lists: true]
+
+# Perceived Affordance Lends Creedence to Artifice
+
+![inline](images/floppy-disk.png)
+
+* You don't necessarily save to a disk.
+* If you did, it wouldn't be a floppy.
+* If it was a floppy disk, it wouldn't just be a drawing.
+
+^ Perceived affordance! This is *very* artificial
+
+---
+
+# Caveat!
+
+^ To be clear, I'm skimming the surface and slightly misusing "affordance" for the sake of simplicity. Please feel free to read more.
+
+---
+
+# Part II: A Present of Design
+
+^ Okay, let's get back to APIs.
+
+---
+
 # Roy Fielding
 
-^ TODO image of fielding
+![inline](images/fielding.jpg)
 
 ^ This is Roy Fielding. Some of you might know who he is, some might not.
 
@@ -40,6 +98,15 @@ theme: Ostrich, 1
 
 ^ That idea was REST and, unless you've read his thesis, it's probably quite different than you imagine. Now, I'm not going to try to explain the whole thing because I don't have the time, but let's talk about a few bits.
 
+^ Yes, I know that in this slide the title text is huge and broken up weirdly
+
+---
+
+# rep·re·sen·ta·
+# tion
+
+^ Aside: if you look up a word in a dictionary it often has these dots. They don't represent pronounciation. They're actually hinted places to take line breaks in constrained media (YMMV per dictionary). You might call that an affordance, if you knew what they were for.
+
 ---
 
 # Not Necessary
@@ -52,7 +119,7 @@ JSON and HTTP are neither necessary nor sufficient.
 
 # Hypermedia
 
-> What needs to be done to make the REST architectural style clear on the notion that hypertext is a constraint?
+> "What needs to be done to make the REST architectural style clear on the notion that hypertext is a constraint?"
 
 ^ There are a few reasons for that but the most obvious is that REST is defined as a system for distributed hypermedia. The whole thing hinges on it. As Fielding has said many times, Hypermedia Is A Constraint. So... what is it?
 
@@ -60,32 +127,131 @@ JSON and HTTP are neither necessary nor sufficient.
 
 # Hypertext is...
 
-> When I say hypertext, I mean the simultaneous presentation of information and controls such that the information becomes the affordance through which the user (or automaton) obtains choices and selects actions.
+> "When I say hypertext, I mean the simultaneous presentation of information and controls such that the information becomes the **affordance** through which the user (or automaton) obtains choices and selects actions."
 
-^ TODO
-
----
-
-# An Aside into Affordance...
-
-^ TODO
-
-
+^ Do we see the callback there that I so subtly placed a while back? The mechanisms to control information presented AS the information is the pretty radical thing that REST is built around. It's not the only thing, but affordance is really high up the list.
 
 ---
 
-# Back to Hypertext
+# Right, but what?
 
-^ TODO
+^ Okay, I appreciate that we're back out into the conceptual swamp at this point struggling to find land. Let's talk about one limited application of this.
 
+---
 
+[.build-lists: true]
+
+# Collections
+
+* Next, previous, start, end
+* Filter
+* Sort By...
+* Group By...
+
+^ This is the most common place you'll see controls in REST, because it's conceptually simple, very generic, and makes life easier for integrators.
+
+^ When we have large data sets we want to share with the world, we often don't want to just do a huge data dump. We use affordances to offer options for navigating through datasets.
+
+---
+
+# HAL-style
+
+```javascript
+{
+  "items": {
+    ...
+  }
+    "_links": {
+        "next": { "href": "/page=2" }
+    }
+}
+```
+
+^ This is just a quick syntax example. I don't think I've seen any "standard" JSON syntax for this that I particularly like, but some are better than others.
+
+---
+
+# Generic
+
+^ These are really generic collection affordances. It doesn't matter what the underlying items are, the affordances should work. REST puts a lot of emphasise on standard controls when possible.
+
+---
+
+# Make Afforded APIs
+
+^ There's lots I don't really have time to get into on controls in APIs, but let's leave that as an exercise to the reader and move onto the next part
+
+---
+
+# Part III: A Future of Design
+
+^ This is the quickest chunk at the moment, but I could see this as the biggest part of the talk at some point.
+
+---
+
+# Evolution
+
+^ It's almost unheard of that APIs don't change. Most people would add versioning. Fielding (rightly, IMO) argues that that's a mistake and unnecessary in a Hypermedia world. If the forms (in the sense of data types) and links are afforded as they are presented, then a reasonable client can adapt to change. Versioning shows that you've got a non-RESTy system.
+
+---
+
+# Build for change
+
+^ If we're saying that change is inevitable, then plan for it. Tell integrators that you absolutely will make changes slowly and certainly. In an internal org API, that shouldn't be much of an issue. You even have a great tool at your disposal...
+
+---
+
+# Consumer-Driven Contracts
+
+^ If your org controls both ends of the wire, then write CDCs. These are tests that the client gives you detailing its expectations of how your API should work and the parts it cares about. The consumer can run against these expectations and ensure it's behaving correctly.
+
+^ They can also give the expectations to you, so you can run them when you make changes. Something breaks? Now you know what consumer you need to speak to about how you can progress together.
+
+---
+
+# PART IV: Heat Death of The Universe Design
+
+---
+
+[.build-lists: true]
+
+# The Forms of Things
+
+* Links
+* Forms
+
+^ So we want APIs that have affordance in terms of hypermedia. There are different kinds of hypermedia control that act as affordance. Hyperlinks act as ways of moving between data, as connection (where that connection could have meaning). But there's this other affordance we care about where we want (lightweight?) ways of knowing the structure of resources we want to talk about. i.e. a Person has a name which is text, an age that is a number > 0, etc
+
+---
+
+# JSON ... why?
+
+^ JSON, natively, doesn't have a hypermedia link type. Various standards exist to try to patch that in, but it's missing. JSON doesn't have forms. Various standards exist to try to patch that in (but are shonkier).
+
+---
+
+# What does then?
+
+^ Is there a better format? Something lightweight, changeable, well-understood, that has these things.
+
+---
+
+# HTML5 has it All
+
+^ It has everything you'd want...
+
+^ Am I seriously arguing for it? Hmmm... maybe... dunno. What argument would you have against it?
+
+---
+
+# PART TBC: NEXT ITERATION
 
 TODO
-Affordances -> rest
-API evolution
-Contract Tests
-Alternatives to REST: GraphQL
-Alternatives to JSON -> HTML5
+
+* Whole bunch of stuff I'm not touching (layered systems, true HATEOAS)
+* Contract Tests (Currently way too quick.)
+* Alternatives to REST: GraphQL
+* After the bit about Generic controls, expand into non-generic controls, standard resource manipulation mechanisms, and some stuff about how it's fine to expect agent domain knowledge for particular resources.
 
 ---
 
