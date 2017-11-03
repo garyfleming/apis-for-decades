@@ -54,7 +54,7 @@ theme: Ostrich, 1
 
 [.build-lists: true]
 
-# Perceived Affordance Lends Creedence to Artifice
+# Perceived Affordance Lends Credence to Artifice
 
 ![inline](images/floppy-disk.png)
 
