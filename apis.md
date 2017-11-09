@@ -42,7 +42,7 @@ theme: Ostrich, 1
 
 ^ Don Norman appropriated the term for his book, "The Psychology of Everyday Things". He later clarified that he should have used "Perceived Affordance" as his term of art: designers care that someone perceives something is possible more than whether it is.
 
-^ He has argued, for example, that a button on a computer screen affords touching, whether the computer is a touch-screen or not. But what we might care about is whether we believe touching the button will cause an action, and what action that will be.
+^ To draw the line between affordance and perceived affordance, he has argued, for example, that a button on a computer screen affords touching, whether the computer is a touch-screen or not. But what we might care about is whether we believe touching the button will cause an action, and what action that will be.
 
 ---
 
@@ -90,7 +90,7 @@ theme: Ostrich, 1
 
 > Architectural Styles and the Design of Network-based Software Architectures.
 
-^ In 2000, Fielding submitted his Doctoral disseration. It was titled "Architectural Styles and the Design of Network-based Software Architectures." It's a good read; and something that you should read if you haven't because it was where an important idea was first defined.
+^ In 2000, Fielding submitted his Doctoral dissertation. It was titled "Architectural Styles and the Design of Network-based Software Architectures." It's a good read; and something that you should read if you haven't because it was where an important idea was first defined.
 
 ---
 
@@ -106,14 +106,6 @@ theme: Ostrich, 1
 # tion
 
 ^ Aside: if you look up a word in a dictionary it often has these dots. They don't represent pronounciation. They're actually hinted places to take line breaks in constrained media (YMMV per dictionary). You might call that an affordance, if you knew what they were for.
-
----
-
-# Not Necessary
-
-JSON and HTTP are neither necessary nor sufficient.
-
-^ First, I'd bet that most "REST" APIs you have seen are HTTP over JSON. And that's fine. I like HTTP. I like JSON. But those items are neither necessary nor sufficient for a REST API.
 
 ---
 
@@ -211,6 +203,15 @@ JSON and HTTP are neither necessary nor sufficient.
 
 # PART IV: Heat Death of The Universe Design
 
+
+---
+
+# Not Necessary
+
+JSON and HTTP are neither necessary nor sufficient.
+
+^ First, I'd bet that most "REST" APIs you have seen are HTTP over JSON. And that's fine. I like HTTP. I like JSON. But those items are neither necessary nor sufficient for a REST API.
+
 ---
 
 [.build-lists: true]
@@ -230,9 +231,24 @@ JSON and HTTP are neither necessary nor sufficient.
 
 ---
 
-# What does then?
+# Anything Else We Want?
 
-^ Is there a better format? Something lightweight, changeable, well-understood, that has these things.
+* Links
+* Forms
+* Human readable
+* Machine readable
+* Compressable?
+* Lightweight Structures
+* Optional Types
+* Existing tooling
+
+^ There might be other things we do want in our APIs. I asked a bunch of developers the characteristics they wanted from tools and this is roughly what I got. By Structure, they meant simple data structures to arrange things properly. Arrays, maps, etc
+
+---
+
+# If not JSON, then what?
+
+^ JSON meets some of these additional requirements. Is there a better format? Something lightweight, changeable, well-understood, that has these things.
 
 ---
 
@@ -256,5 +272,7 @@ TODO
 ---
 
 # Thank You
+
+![inline](images/cat3.gif)
 
 @garyfleming
