@@ -264,10 +264,14 @@ JSON and HTTP are neither necessary nor sufficient.
 
 TODO
 
+* Ship of Theseus - paradox by Plutarch -- Gladwell golf episode had names for two interpretations
+* Alice Juarrero's work on chage and evolutionary design -- Dynamics in Action
+* Tweet: "APIs are hard. They are pretty much ship now, regret later" - @Chethaase https://twitter.com/chiuki/status/927232305784950784
 * Whole bunch of stuff I'm not touching (layered systems, true HATEOAS)
 * Contract Tests (Currently way too quick.)
 * Alternatives to REST: GraphQL
 * After the bit about Generic controls, expand into non-generic controls, standard resource manipulation mechanisms, and some stuff about how it's fine to expect agent domain knowledge for particular resources.
+* Actual HTML5 example -- worked through. Pains etc
 
 ---
 
