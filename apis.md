@@ -264,6 +264,8 @@ JSON and HTTP are neither necessary nor sufficient.
 
 TODO
 
+* New structure for longer version? Pair a design/philosophy section explicitly with an implementation change section. Lead up to the html5 bit at the end.
+
 * Ship of Theseus - paradox by Plutarch -- Gladwell golf episode had names for two interpretations
 * Talk about the intentionality of design. Leads to templating.
 * Talk about some of the issues with object mappers for view generation (coupling, less clarity, undesigned). Suggest templating as an alternative.
