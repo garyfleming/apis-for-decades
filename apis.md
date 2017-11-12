@@ -265,6 +265,7 @@ JSON and HTTP are neither necessary nor sufficient.
 TODO
 
 * Ship of Theseus - paradox by Plutarch -- Gladwell golf episode had names for two interpretations
+* Talk about some of the issues with object mappers for view generation (coupling, less clarity, undesigned). Suggest templating as an alternative.
 * Alice Juarrero's work on chage and evolutionary design -- Dynamics in Action
 * Tweet: "APIs are hard. They are pretty much ship now, regret later" - @Chethaase https://twitter.com/chiuki/status/927232305784950784
 * Whole bunch of stuff I'm not touching (layered systems, true HATEOAS)
