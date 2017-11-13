@@ -274,6 +274,8 @@ TODO
 * Whole bunch of stuff I'm not touching (layered systems, true HATEOAS)
 * Contract Tests (Currently way too quick.)
 * Alternatives to REST: GraphQL
+* Japanese bullet trains exiting tunnels made a sonic boom like noise (air compression). They looked to nature for answers. Found the kingfisher -> Faster, more energy efficient, and much quieter.
+* No idea the analogue of natural things for API design. Figure it out. Make a wild leap.
 * After the bit about Generic controls, expand into non-generic controls, standard resource manipulation mechanisms, and some stuff about how it's fine to expect agent domain knowledge for particular resources.
 * Actual HTML5 example -- worked through. Pains etc
 
