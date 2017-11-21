@@ -267,6 +267,9 @@ TODO
 * New structure for longer version? Pair a design/philosophy section explicitly with an implementation change section. Lead up to the html5 bit at the end.
 
 * Ship of Theseus - paradox by Plutarch -- Gladwell golf episode had names for two interpretations
+*  ufo 50. 5 devs. Fictional console with colour and sound limits. Other technical limits. 50 games. Constraints enabled going faster! 35 games made in a year or so.
+*  testing: fuzzers. Force use of affordances by randomising links in test envs. Force discovery of structure by adding randomised noise; Json that looks like the real thing but isn’t  (done this before)
+* transactive memory - the idea that we store our ideas and knowledge outside ourselves. I don’t need to know how a remote works if my wife knows. I don’t need to know the emotional relationships between people if someone I know and trust does it for me. This is somewhat like generic controls. Don’t need to know how to navigate a set if the server can tell me
 * Talk about the intentionality of design. Leads to templating.
 * Talk about some of the issues with object mappers for view generation (coupling, less clarity, undesigned). Suggest templating as an alternative.
 * Alice Juarrero's work on chage and evolutionary design -- Dynamics in Action
