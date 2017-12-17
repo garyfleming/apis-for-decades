@@ -284,6 +284,7 @@ TODO
 * Cars have brakes so we can drive faster. APIs have tests (particularly contract tests) to allow us to change faster
 * Japanese bullet trains exiting tunnels made a sonic boom like noise (air compression). They looked to nature for answers. Found the kingfisher -> Faster, more energy efficient, and much quieter.
 * No idea the analogue of natural things for API design. Figure it out. Make a wild leap.
+* Web pages as analogues of REST APIs. Discovering controls in real time. Often stateless. etc.
 * Evolution does have an analogue in versioning. There was no v2 for animals, just constant evolutionary change.
 * After the bit about Generic controls, expand into non-generic controls, standard resource manipulation mechanisms, and some stuff about how it's fine to expect agent domain knowledge for particular resources.
 * Actual HTML5 example -- worked through. Pains etc
