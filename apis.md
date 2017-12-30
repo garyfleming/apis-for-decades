@@ -288,7 +288,8 @@ TODO
 * Evolution does have an analogue in versioning. There was no v2 for animals, just constant evolutionary change.
 * After the bit about Generic controls, expand into non-generic controls, standard resource manipulation mechanisms, and some stuff about how it's fine to expect agent domain knowledge for particular resources.
 * Actual HTML5 example -- worked through. Pains etc
-* Richardson Maturity model. good for thinking about some aspects of REST but doesn’t go far enough. 
+* Richardson Maturity model. good for thinking about some aspects of REST but doesn’t go far enough.
+* Anything of use in this response about REST not being SOAP and RPC being fine for RPCy stuff? https://philsturgeon.uk/api/2017/12/18/rest-confusion-explained/
 
 
 ---
