@@ -282,7 +282,7 @@ TODO
 * Voice control related: chatbot. ELIZA, first "AI" chatbot. Like the quote in this article about delusional thinking: https://blog.myralabs.com/your-chatbot-needs-a-name-b8f92f337386
 * "Time drags" - the past has a dragging effect on the present. From the book Time Binds, by the Queer Theorist, Elizabeth Freeman
 * Cars have brakes so we can drive faster. APIs have tests (particularly contract tests) to allow us to change faster
-* Japanese bullet trains exiting tunnels made a sonic boom like noise (air compression). They looked to nature for answers. Found the kingfisher -> Faster, more energy efficient, and much quieter.
+* Japanese bullet trains exiting tunnels made a sonic boom like noise (air compression). They looked to nature for answers. Found the kingfisher -> Faster, more energy efficient, and much quieter. https://www.youtube.com/watch?v=iMtXqTmfta0
 * No idea the analogue of natural things for API design. Figure it out. Make a wild leap.
 * Web pages as analogues of REST APIs. Discovering controls in real time. Often stateless. etc.
 * Evolution does have an analogue in versioning. There was no v2 for animals, just constant evolutionary change.
