@@ -272,6 +272,8 @@ TODO
 * transactive memory - the idea that we store our ideas and knowledge outside ourselves. I don’t need to know how a remote works if my wife knows. I don’t need to know the emotional relationships between people if someone I know and trust does it for me. This is somewhat like generic controls. Don’t need to know how to navigate a set if the server can tell me
 * Talk about the intentionality of design. Leads to templating.
 * Talk about some of the issues with object mappers for view generation (coupling, less clarity, undesigned). Suggest templating as an alternative.
+* Affordances: use mario games as an example. The "star" shape you know to use for pounding in different
+contexts (tanks, stairs etc) is an example. Question Mark blocks are another.
 * Alice Juarrero's work on chage and evolutionary design -- Dynamics in Action
 * Tweet: "APIs are hard. They are pretty much ship now, regret later" - @Chethaase https://twitter.com/chiuki/status/927232305784950784
 * Whole bunch of stuff I'm not touching (layered systems, true HATEOAS)
