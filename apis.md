@@ -292,6 +292,8 @@ contexts (tanks, stairs etc) is an example. Question Mark blocks are another.
 * Actual HTML5 example -- worked through. Pains etc
 * Richardson Maturity model. good for thinking about some aspects of REST but doesn’t go far enough.
 * Anything of use in this response about REST not being SOAP and RPC being fine for RPCy stuff? https://philsturgeon.uk/api/2017/12/18/rest-confusion-explained/
+* Possible framing device for everything is this Georgia O'Keefe quote: “Nothing is less real than realism. Details are confusing. It is only by selection, by elimination, by emphasis, that we get at the real meaning of things.” https://www.goodreads.com/quotes/672223-nothing-is-less-real-than-realism-details-are-confusing-it
+* Joke to follow the Georgia O'keefe quote once we've covered it a bit: "Now some of you are thinking that that name, Georgia O'Keefe, is vaguely familiar. She was mentioned in Breaking Bad, during season 2, by Jesse's erstwhile girlfriend, Jane."
 
 
 ---
