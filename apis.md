@@ -6,29 +6,34 @@ theme: Ostrich, 1
 
 ^ Intro: more informal and less scripted, less prepared
 
----
-
-^ Okay, so I want to talk a bit about some thoughts that I've been mulling over for a few years now on the subject of API design. "A few years" might make you think that I've got some answers to share or some unique insight; so let me start by dissuading you. I don't. There are probably some good ideas in here, and some that are a waste of time.
+^ TODO ADD AN IMAGE AS THE BACKGROUND
 
 ---
 
-^ So Relax, it's okay. Because this is at least partially a waste of time, you can relieve yourself of the burden of focussing to hear the answers. They won't come. Instead, just let it wash over you and start that thinking process for yourself.
+![inline](images/apis-are-hard.png)
 
 ---
 
-^ Really. If we can achieve anything to do, I'd like it to be that we can accept that our API designs to date are not perfect (nothing is), and that with a little time and, crucially, thinking we can improve them just a little bit.
+# A Long Time Ago...
+
+^ TODO story about legacy system
 
 ---
 
-# Part I: A Past of Design
+# What do we want in an API?
 
-^ If we're going to talk about how to improve our designs, let's talk about some design-related ideas.
+^ TODO
+
+---
+
+# Part I: What can you Afford?
 
 ---
 
 ![inline](images/screwdriver.png)
 
 ^ What is this? What is it for? Is it obvious from looking at it what it does? How it does what it does?
+
 
 ---
 
@@ -37,6 +42,23 @@ theme: Ostrich, 1
 ^ Perceptual psychologist James Gibson coined the term affordance in 1966. He used it do describe how an actor (person, animal etc) would see the actional properties of the world around them. Part of nature: not necessarily visible. Open terrain affords running. Trees afford hiding. They afford climbing. They might afford sustenance to some actors (not necessarily visible!)
 
 ---
+
+![](images/cat-tree.jpg)
+
+---
+
+![](images/bird-tree.jpg)
+
+---
+
+![](images/sloth-tree.jpg)
+
+---
+
+![](images/sloth-face.jpg)
+
+---
+
 
 # Perceived Affordance
 
@@ -54,9 +76,7 @@ theme: Ostrich, 1
 
 [.build-lists: true]
 
-# Perceived Affordance Lends Credence to Artifice
-
-![inline](images/floppy-disk.png)
+![fit](images/floppy-disk.png)
 
 * You don't necessarily save to a disk.
 * If you did, it wouldn't be a floppy.
@@ -66,29 +86,32 @@ theme: Ostrich, 1
 
 ---
 
+![left fit](images/mario03.png) ![right fit](images/GroundPoundSwitch.jpg)
+
+^ TODO consider where this fits in the flow. Possibly before the floppy disk
+
+---
+
+![left fit](images/mario03.png) ![right fit](images/Mandibug.png)
+
+---
+
 # Caveat!
 
 ^ To be clear, I'm skimming the surface and slightly misusing "affordance" for the sake of simplicity. Please feel free to read more.
 
 ---
 
-# Part II: A Present of Design
-
-^ Okay, let's get back to APIs.
-
----
-
 # Roy Fielding
 
-![inline](images/fielding.jpg)
+![right fit](images/fielding.jpg)
 
 ^ This is Roy Fielding. Some of you might know who he is, some might not.
 
 ---
 
-# Roy Fielding
 
-> Architectural Styles and the Design of Network-based Software Architectures.
+> "Architectural Styles and the Design of Network-based Software Architectures."
 
 ^ In 2000, Fielding submitted his Doctoral dissertation. It was titled "Architectural Styles and the Design of Network-based Software Architectures." It's a good read; and something that you should read if you haven't because it was where an important idea was first defined.
 
@@ -103,31 +126,37 @@ theme: Ostrich, 1
 ---
 
 # rep·re·sen·ta·
-# tion
+# tion·al
 
 ^ Aside: if you look up a word in a dictionary it often has these dots. They don't represent pronounciation. They're actually hinted places to take line breaks in constrained media (YMMV per dictionary). You might call that an affordance, if you knew what they were for.
 
 ---
 
-# Hypermedia
-
-> "What needs to be done to make the REST architectural style clear on the notion that hypertext is a constraint?"
-
-^ There are a few reasons for that but the most obvious is that REST is defined as a system for distributed hypermedia. The whole thing hinges on it. As Fielding has said many times, Hypermedia Is A Constraint. So... what is it?
-
----
-
 # Hypertext is...
 
-> "When I say hypertext, I mean the simultaneous presentation of information and controls such that the information becomes the **affordance** through which the user (or automaton) obtains choices and selects actions."
+> "... the simultaneous presentation of information and controls such that the information becomes the **affordance** through which the user [...] obtains choices and selects actions."
 
 ^ Do we see the callback there that I so subtly placed a while back? The mechanisms to control information presented AS the information is the pretty radical thing that REST is built around. It's not the only thing, but affordance is really high up the list.
 
 ---
 
-# Right, but what?
+# Wut?
 
-^ Okay, I appreciate that we're back out into the conceptual swamp at this point struggling to find land. Let's talk about one limited application of this.
+![original](images/wut-cat.jpg)
+
+^ Okay, I know the last few slides have been fairly information dense. So let me simplify
+
+---
+
+# Information + Controls = Better API
+
+^ Let's make this clear. You put your mechanisms for controlling your API into the information returned by your API. You don't separate them out.
+
+---
+
+# Example pls
+
+![](images/curious-cat.jpg)
 
 ---
 
@@ -169,21 +198,57 @@ theme: Ostrich, 1
 
 ---
 
-# Make Afforded APIs
-
-^ There's lots I don't really have time to get into on controls in APIs, but let's leave that as an exercise to the reader and move onto the next part
+^ TODO Add text adventure section! Domain knowledge is okay
 
 ---
 
-# Part III: A Future of Design
+# Part II: Change
 
-^ This is the quickest chunk at the moment, but I could see this as the biggest part of the talk at some point.
+^ TODO
 
 ---
 
-# Evolution
+# Bullet Trains
 
-^ It's almost unheard of that APIs don't change. Most people would add versioning. Fielding (rightly, IMO) argues that that's a mistake and unnecessary in a Hypermedia world. If the forms (in the sense of data types) and links are afforded as they are presented, then a reasonable client can adapt to change. Versioning shows that you've got a non-RESTy system.
+^ TODO find image
+
+---
+
+# Biomimicry
+
+^ We know that we can see incredible designs in nature. Evolution has produced some fantastic fits
+for what makes sense to us. I'm going to suggest we mimic an aspect of evolution
+
+---
+
+# Ship of Theseus
+
+^ TODO image. Possibly remove this?
+
+---
+
+# Owl V2
+
+![fit](images/owl-v2.png)
+
+---
+
+# Affordance Trumps Versioning
+
+^ TODO explain that if we present the controls we can use on a piece of information as part of that Information
+then we don't need versions. We just change the affordance we make available.
+
+---
+
+# You Deal With This Every Day
+
+^ TODO web pages example
+
+^ TODO, edit this next text down. It's almost unheard of that APIs don't change. Most people would add versioning. Fielding (rightly, IMO) argues that that's a mistake and unnecessary in a Hypermedia world. If the forms (in the sense of data types) and links are afforded as they are presented, then a reasonable client can adapt to change. Versioning shows that you've got a non-RESTy system.
+
+---
+
+# PART III: Testing
 
 ---
 
@@ -193,11 +258,50 @@ theme: Ostrich, 1
 
 ---
 
+
+---
+
 # Consumer-Driven Contracts
 
 ^ If your org controls both ends of the wire, then write CDCs. These are tests that the client gives you detailing its expectations of how your API should work and the parts it cares about. The consumer can run against these expectations and ensure it's behaving correctly.
 
 ^ They can also give the expectations to you, so you can run them when you make changes. Something breaks? Now you know what consumer you need to speak to about how you can progress together.
+
+
+---
+
+[.build-lists: true]
+
+# Fuzzers
+
+* Modify parts without contract coverage
+* Scramble links
+* Add in dummy data
+
+
+---
+
+# PART IV: A NEW OLD API
+
+^ TODO use examples above and elsewhere to argue against JSON. Argue for HTML5
+
+---
+
+.... BREAK POINT BETWEEN OLD AND NEW
+
+---
+
+^ Okay, so I want to talk a bit about some thoughts that I've been mulling over for a few years now on the subject of API design. "A few years" might make you think that I've got some answers to share or some unique insight; so let me start by dissuading you. I don't. There are probably some good ideas in here, and some that are a waste of time.
+
+---
+
+^ So Relax, it's okay. Because this is at least partially a waste of time, you can relieve yourself of the burden of focussing to hear the answers. They won't come. Instead, just let it wash over you and start that thinking process for yourself.
+
+---
+
+^ Really. If we can achieve anything to do, I'd like it to be that we can accept that our API designs to date are not perfect (nothing is), and that with a little time and, crucially, thinking we can improve them just a little bit.
+
+
 
 ---
 
@@ -258,48 +362,11 @@ JSON and HTTP are neither necessary nor sufficient.
 
 ^ Am I seriously arguing for it? Hmmm... maybe... dunno. What argument would you have against it?
 
----
-
-# PART TBC: NEXT ITERATION
-
-TODO
-
-* New structure for longer version? Pair a design/philosophy section explicitly with an implementation change section. Lead up to the html5 bit at the end.
-
-* Ship of Theseus - paradox by Plutarch -- Gladwell golf episode had names for two interpretations
-*  ufo 50. 5 devs. Fictional console with colour and sound limits. Other technical limits. 50 games. Constraints enabled going faster! 35 games made in a year or so.
-*  testing: fuzzers. Force use of affordances by randomising links in test envs. Force discovery of structure by adding randomised noise; Json that looks like the real thing but isn’t  (done this before)
-* transactive memory - the idea that we store our ideas and knowledge outside ourselves. I don’t need to know how a remote works if my wife knows. I don’t need to know the emotional relationships between people if someone I know and trust does it for me. This is somewhat like generic controls. Don’t need to know how to navigate a set if the server can tell me
-* Talk about the intentionality of design. Leads to templating.
-* Talk about some of the issues with object mappers for view generation (coupling, less clarity, undesigned). Suggest templating as an alternative.
-* Affordances: use mario games as an example. The "star" shape you know to use for pounding in different
-contexts (tanks, stairs etc) is an example. Question Mark blocks are another.
-* Alice Juarrero's work on chage and evolutionary design -- Dynamics in Action
-* Tweet: "APIs are hard. They are pretty much ship now, regret later" - @Chethaase https://twitter.com/chiuki/status/927232305784950784
-* Whole bunch of stuff I'm not touching (layered systems, true HATEOAS)
-* Contract Tests (Currently way too quick.)
-* Alternatives to REST: GraphQL
-* Text Adventures as bad analogues for generic api controls
-* Voice control. Limited sensible verbs. leads to RESTy design. At least helps flush out hateoas controls.
-* Voice control related: chatbot. ELIZA, first "AI" chatbot. Like the quote in this article about delusional thinking: https://blog.myralabs.com/your-chatbot-needs-a-name-b8f92f337386
-* "Time drags" - the past has a dragging effect on the present. From the book Time Binds, by the Queer Theorist, Elizabeth Freeman
-* Cars have brakes so we can drive faster. APIs have tests (particularly contract tests) to allow us to change faster
-* Japanese bullet trains exiting tunnels made a sonic boom like noise (air compression). They looked to nature for answers. Found the kingfisher -> Faster, more energy efficient, and much quieter. https://www.youtube.com/watch?v=iMtXqTmfta0
-* No idea the analogue of natural things for API design. Figure it out. Make a wild leap.
-* Web pages as analogues of REST APIs. Discovering controls in real time. Often stateless. etc.
-* Evolution does have an analogue in versioning. There was no v2 for animals, just constant evolutionary change.
-* After the bit about Generic controls, expand into non-generic controls, standard resource manipulation mechanisms, and some stuff about how it's fine to expect agent domain knowledge for particular resources.
-* Actual HTML5 example -- worked through. Pains etc
-* Richardson Maturity model. good for thinking about some aspects of REST but doesn’t go far enough.
-* Anything of use in this response about REST not being SOAP and RPC being fine for RPCy stuff? https://philsturgeon.uk/api/2017/12/18/rest-confusion-explained/
-* Possible framing device for everything is this Georgia O'Keefe quote: “Nothing is less real than realism. Details are confusing. It is only by selection, by elimination, by emphasis, that we get at the real meaning of things.” https://www.goodreads.com/quotes/672223-nothing-is-less-real-than-realism-details-are-confusing-it
-* Joke to follow the Georgia O'keefe quote once we've covered it a bit: "Now some of you are thinking that that name, Georgia O'Keefe, is vaguely familiar. She was mentioned in Breaking Bad, during season 2, by Jesse's erstwhile girlfriend, Jane."
-
 
 ---
 
 # Thank You
 
-![inline](images/cat3.gif)
+![left](images/cat3.gif)
 
-@garyfleming
+## @garyfleming
