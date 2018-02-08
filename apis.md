@@ -2,7 +2,7 @@ theme: Ostrich, 1
 
 # APIs on the Scale of Decades
 
-@garyfleming
+## @garyfleming
 
 ^ Intro: more informal and less scripted, less prepared
 
@@ -22,18 +22,24 @@ theme: Ostrich, 1
 
 # What do we want in an API?
 
-^ TODO
+* Machine and human readable
+* Changeable
+* Testable
+* Documented
 
 ---
 
 # Part I: What can you Afford?
 
+
 ---
 
-![inline](images/screwdriver.png)
+![left fit](images/mario03.png) ![right fit](images/GroundPoundSwitch.png)
 
-^ What is this? What is it for? Is it obvious from looking at it what it does? How it does what it does?
 
+---
+
+![left fit](images/mario03.png) ![right fit](images/Mandibug.png)
 
 ---
 
@@ -84,15 +90,6 @@ theme: Ostrich, 1
 
 ^ Perceived affordance! This is *very* artificial
 
----
-
-![left fit](images/mario03.png) ![right fit](images/GroundPoundSwitch.jpg)
-
-^ TODO consider where this fits in the flow. Possibly before the floppy disk
-
----
-
-![left fit](images/mario03.png) ![right fit](images/Mandibug.png)
 
 ---
 
@@ -198,19 +195,55 @@ theme: Ostrich, 1
 
 ---
 
-^ TODO Add text adventure section! Domain knowledge is okay
+# Text Adventures
+
+![fit original](images/text-adventure.gif)
+
+^ If you ever played an old text adventure, there will usually a bunch of standard verbs you could use
+against the nouns. But these were domain specific. "Go north", "turn wheel", "kill dragon"
+
+---
+
+![](images/kill-jester.jpg)
+
+^ "kill-jester"
+
+---
+
+# Domain Knowledge is Okay
+
+![](images/sloth-tree.jpg)
+
+^ It's fine to use domain specific verbs and nouns to describe affordances. It's okay to expect agents to only understand the controls you're offering alongside the information if thye understand the domain itself.
+
+---
+
+# Alexa search for...
+
+![fit ](images/echo.png)
+
+^ A good way of finding those verbs and nouns is imagining a voice interface. How would you want to ask
+Siri/Alexa to do what you want to do? Offer *that* to your users alongside the info.
 
 ---
 
 # Part II: Change
 
-^ TODO
+^ So I've talked a lot about affordance and controls because I think it underpins most of everything else. One of the other things people wanted was for things to be safe to change. How do we do that?
+
+---
+
+# Ship of Theseus
+
+![fit](images/ship.png)
 
 ---
 
 # Bullet Trains
 
-^ TODO find image
+![](images/bullet-train.jpg)
+
+^ Tunnels, sonic booms, re-engineering. Kingfishers. No splashes. No sonic boom.
 
 ---
 
@@ -221,30 +254,28 @@ for what makes sense to us. I'm going to suggest we mimic an aspect of evolution
 
 ---
 
-# Ship of Theseus
-
-^ TODO image. Possibly remove this?
-
----
-
 # Owl V2
 
 ![fit](images/owl-v2.png)
+
+^ There was no owl v2. Or v3. Instead we had simple birds becoming more specialised over Time
+until we had the owls we have today. The owls in a millenium from now will be different. They'll still
+be owls.
 
 ---
 
 # Affordance Trumps Versioning
 
-^ TODO explain that if we present the controls we can use on a piece of information as part of that Information
+^  if we present the controls we can use on a piece of information as part of that Information
 then we don't need versions. We just change the affordance we make available.
 
 ---
 
 # You Deal With This Every Day
 
-^ TODO web pages example
+![](images/web-page.png)
 
-^ TODO, edit this next text down. It's almost unheard of that APIs don't change. Most people would add versioning. Fielding (rightly, IMO) argues that that's a mistake and unnecessary in a Hypermedia world. If the forms (in the sense of data types) and links are afforded as they are presented, then a reasonable client can adapt to change. Versioning shows that you've got a non-RESTy system.
+^ You visit web pages and deal with the links they throw up. You never concern yourself with whether you're viewing google V1, v2, or v1000000.
 
 ---
 
@@ -254,10 +285,9 @@ then we don't need versions. We just change the affordance we make available.
 
 # Build for change
 
+![fit ](images/screwdriver.png)
+
 ^ If we're saying that change is inevitable, then plan for it. Tell integrators that you absolutely will make changes slowly and certainly. In an internal org API, that shouldn't be much of an issue. You even have a great tool at your disposal...
-
----
-
 
 ---
 
@@ -285,40 +315,9 @@ then we don't need versions. We just change the affordance we make available.
 
 ^ TODO use examples above and elsewhere to argue against JSON. Argue for HTML5
 
----
-
-.... BREAK POINT BETWEEN OLD AND NEW
+^ So far I've argued for affordances, presenting information and tests together.
 
 ---
-
-^ Okay, so I want to talk a bit about some thoughts that I've been mulling over for a few years now on the subject of API design. "A few years" might make you think that I've got some answers to share or some unique insight; so let me start by dissuading you. I don't. There are probably some good ideas in here, and some that are a waste of time.
-
----
-
-^ So Relax, it's okay. Because this is at least partially a waste of time, you can relieve yourself of the burden of focussing to hear the answers. They won't come. Instead, just let it wash over you and start that thinking process for yourself.
-
----
-
-^ Really. If we can achieve anything to do, I'd like it to be that we can accept that our API designs to date are not perfect (nothing is), and that with a little time and, crucially, thinking we can improve them just a little bit.
-
-
-
----
-
-# PART IV: Heat Death of The Universe Design
-
-
----
-
-# Not Necessary
-
-JSON and HTTP are neither necessary nor sufficient.
-
-^ First, I'd bet that most "REST" APIs you have seen are HTTP over JSON. And that's fine. I like HTTP. I like JSON. But those items are neither necessary nor sufficient for a REST API.
-
----
-
-[.build-lists: true]
 
 # The Forms of Things
 
@@ -335,24 +334,23 @@ JSON and HTTP are neither necessary nor sufficient.
 
 ---
 
+# What do we want in an API?
+
+* Machine and human readable
+* Changeable
+* Testable
+* Documented
+
+----
+
 # Anything Else We Want?
 
 * Links
 * Forms
-* Human readable
-* Machine readable
-* Compressable?
+* Compressable
 * Lightweight Structures
 * Optional Types
 * Existing tooling
-
-^ There might be other things we do want in our APIs. I asked a bunch of developers the characteristics they wanted from tools and this is roughly what I got. By Structure, they meant simple data structures to arrange things properly. Arrays, maps, etc
-
----
-
-# If not JSON, then what?
-
-^ JSON meets some of these additional requirements. Is there a better format? Something lightweight, changeable, well-understood, that has these things.
 
 ---
 
@@ -362,6 +360,14 @@ JSON and HTTP are neither necessary nor sufficient.
 
 ^ Am I seriously arguing for it? Hmmm... maybe... dunno. What argument would you have against it?
 
+---
+
+# You Deal With This Every Day
+
+![](images/web-page.png)
+
+^ Those links, the forms, the domain knowledge. You deal with it every single day. GitHub **is** an API. It's an
+interactive toolset. You have domain knowledge. You can figure it out.
 
 ---
 
@@ -370,3 +376,11 @@ JSON and HTTP are neither necessary nor sufficient.
 ![left](images/cat3.gif)
 
 ## @garyfleming
+
+---
+
+# Thank You
+
+## @garyfleming
+
+## github.com/garyfleming/apis-for-decades/
