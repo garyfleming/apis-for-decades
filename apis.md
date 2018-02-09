@@ -83,7 +83,7 @@ it doesn't die when you jump on it. You just bounce off.
 
 ---
 
-![right fit](images/GroundPoundSwitch.png) ![right fit](images/Mandibug.png)
+![left fit](images/GroundPoundSwitch.png) ![right fit](images/Mandibug.png)
 
 ^ You notice the star on its back and the star on the switch are similar and,
 mostly without engaging your brain, you use the ground pound. Success!
@@ -350,18 +350,38 @@ Offer *that* to your users alongside the info.
 
 ![fit ](images/echo.png)
 
+---
+
+# Affordance is Documentation
+
+^ So I've talked a lot about affordance and controls because I think it underpins most of everything else. If the way we use something is also its documentation, that's a powerful idea.
 
 ---
 
 # Part II: Change
 
-^ So I've talked a lot about affordance and controls because I think it underpins most of everything else. One of the other things people wanted was for things to be safe to change. How do we do that?
+^ One of the other things people wanted was for things to be safe to change. How do we do that?
 
 ---
 
+[.build-lists: true]
+
 # Ship of Theseus
 
+* Mereological theory of identity
+* Spatio-temporal continuity theory
+
 ![fit](images/ship.png)
+
+^ Story.... Mereological suggests that it's a new ship. Sum of its part. Change the parts, Change the thing.
+Spatio-temporal continuity theory - "Object can maintain its identity as long as the change is gradual and the form or the shape of the object is preserved through the change of its components materials."
+
+---
+
+# It's a Versioning Problem
+
+^ The ship of Theseus is a versioning problem, or we can at least see it through that lens.
+When do your changes take you from V1 to V2?
 
 ---
 
@@ -376,7 +396,8 @@ Offer *that* to your users alongside the info.
 # Biomimicry
 
 ^ We know that we can see incredible designs in nature. Evolution has produced some fantastic fits
-for what makes sense to us. I'm going to suggest we mimic an aspect of evolution
+for what makes sense to us. I'm going to suggest we mimic an aspect of evolution: ignore numbers and
+constantly change.
 
 ---
 
@@ -397,15 +418,29 @@ then we don't need versions. We just change the affordance we make available.
 
 ---
 
+![](images/cats-freaked.jpg)
+
+^ Now I know some of you will be freaked out by this. Surely we need versions to keep everything working?
+How will we know what we can do?
+
+---
+
 # You Deal With This Every Day
 
 ![](images/web-page.png)
 
 ^ You visit web pages and deal with the links they throw up. You never concern yourself with whether you're viewing google V1, v2, or v1000000.
+You care about how you can apply your domain knowledge to the information and controls you can see. You do it
+with ease.
 
 ---
 
 # PART III: Testing
+
+![](images/car.jpg)
+
+^ Why do cars have brakes? So they can go faster.
+APIs have tests so they can change faster.
 
 ---
 
@@ -434,29 +469,19 @@ then we don't need versions. We just change the affordance we make available.
 * Scramble links
 * Add in dummy data
 
+---
+
+# Break Assumptions. Think Affordance.
+
+^ Do anything you can to break people's assumptions about what will and won't change about an API.
+Force them to think in affordance.
+
 
 ---
 
 # PART IV: A NEW OLD API
 
-^ TODO use examples above and elsewhere to argue against JSON. Argue for HTML5
-
 ^ So far I've argued for affordances, presenting information and tests together.
-
----
-
-# The Forms of Things
-
-* Links
-* Forms
-
-^ So we want APIs that have affordance in terms of hypermedia. There are different kinds of hypermedia control that act as affordance. Hyperlinks act as ways of moving between data, as connection (where that connection could have meaning). But there's this other affordance we care about where we want (lightweight?) ways of knowing the structure of resources we want to talk about. i.e. a Person has a name which is text, an age that is a number > 0, etc
-
----
-
-# JSON ... why?
-
-^ JSON, natively, doesn't have a hypermedia link type. Various standards exist to try to patch that in, but it's missing. JSON doesn't have forms. Various standards exist to try to patch that in (but are shonkier).
 
 ---
 
@@ -467,12 +492,16 @@ then we don't need versions. We just change the affordance we make available.
 * Testable
 * Documented
 
+^ I've argued as well as I'm going to that APIs that are afforded are changeable,
+and testable. They're documented because they are themselves documentation on their
+own usage.
+
 ----
 
 # Anything Else We Want?
 
-* Links
-* Forms
+* Easy to Navigate
+* Easy to Update Data
 * Compressable
 * Lightweight Structures
 * Optional Types
@@ -480,9 +509,25 @@ then we don't need versions. We just change the affordance we make available.
 
 ---
 
+# The Forms of Things
+
+^ So we want APIs that have affordance in terms of hypermedia. There are different kinds of hypermedia control that act as affordance.
+Hyperlinks act as ways of moving between data, as connection (where that connection could have meaning). But there's this other affordance we care about where we want (lightweight?) ways of knowing the structure of resources we want to talk about. i.e. a Person has a name which is text, an age that is a number > 0, etc
+
+
+---
+
+# JSON... why?
+
+^ JSON, natively, doesn't have a hypermedia link type. Various standards exist to try to patch that in, but it's missing. JSON doesn't have forms. Various standards exist to try to patch that in (but are shonkier).
+
+
+---
+
 # HTML5 has it All
 
-^ It has everything you'd want...
+^ It has everything you'd want. Links, forms, types, structures, great tooling.
+An HTML5 API is its own tooling! Point a browser at it and it'll work just fine.
 
 ^ Am I seriously arguing for it? Hmmm... maybe... dunno. What argument would you have against it?
 
@@ -494,6 +539,23 @@ then we don't need versions. We just change the affordance we make available.
 
 ^ Those links, the forms, the domain knowledge. You deal with it every single day. GitHub **is** an API. It's an
 interactive toolset. You have domain knowledge. You can figure it out.
+
+---
+
+# Write Your APIs using HTML5
+
+![fit](images/html5.png)
+
+---
+
+[.build-lists: true]
+
+# Summary
+
+* Floppy disks are now a trick we play on each other,
+* Sloths get trees in a profound way,
+* Links and forms make APIs readable documentation, that are testable and changeable,
+* HTML 5 is a rock solid real-world example.
 
 ---
 
