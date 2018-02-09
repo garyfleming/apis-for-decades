@@ -4,21 +4,40 @@ theme: Ostrich, 1
 
 ## @garyfleming
 
-^ Intro: more informal and less scripted, less prepared
+![fit original](images/scales.png)
 
-^ TODO ADD AN IMAGE AS THE BACKGROUND
+^ Talk title. Who I am. What I do.
 
 ---
 
 ![inline](images/apis-are-hard.png)
 
+^ Saw this near the start of the work on this talk. Seemed an apt problem
+statement. How do we change this? How do we make it not regrettable?
+
+---
+
+^  Okay, so I want to talk a bit about some thoughts that I've been mulling over for a few years now on the subject of API design. "A few years" might make you think that I've got some answers to share or some unique insight; so let me start by dissuading you. I don't. There are probably some good ideas in here, and some that are a waste of time.
+
+---
+
+^ So Relax, it's okay. Because this is at least partially a waste of time, you can relieve yourself of the burden of focussing to hear the answers. They won't come. Instead, just let it wash over you and start that thinking process for yourself.
+
+---
+
+^ Really. If we can achieve anything to do, I'd like it to be that we can accept that our API designs to date are not perfect (nothing is), and that with a little time and, crucially, thinking we can improve them just a little bit.
+
 ---
 
 # A Long Time Ago...
 
-^ TODO story about legacy system
+^ Client created a system. Now "legacy". It's central to a lot of what they do,
+making changing it a pain. When they do replace it, they want it to be easier in
+the future. They wanted to create an API that would last a long time
 
 ---
+
+[.build-lists: true]
 
 # What do we want in an API?
 
@@ -27,48 +46,122 @@ theme: Ostrich, 1
 * Testable
 * Documented
 
+^ So I asked a number of developers what makes a good API. I got a lot of different
+answers but these were the most common answers.
+Keep them in mind as we progress.
+
 ---
 
 # Part I: What can you Afford?
 
+^ I'm going to talk a little bit about a fairly big idea that underpins most of
+what I think will solve the issues in the last slide. But first an example.
+
+
+---
+
+![left fit](images/mario03.png)
+
+^ This is Mario. He might be familiar to you.
+Mario has a move called the ground pound. He leaps in the air, does a flip, around
+slams into the ground with force.
 
 ---
 
 ![left fit](images/mario03.png) ![right fit](images/GroundPoundSwitch.png)
 
+^ This is a special switch referred to as a ground pound switch. It's never
+referred to as such, but that's what it is. You can jump on it normally and
+nothing happens. Eventually the idea to ground pound it arrives and it works.
 
 ---
 
 ![left fit](images/mario03.png) ![right fit](images/Mandibug.png)
 
+^ Later you meet this creature. It's called a Mandibug. Unlike the normal enemies,
+it doesn't die when you jump on it. You just bounce off.
+
+---
+
+![right fit](images/GroundPoundSwitch.png) ![right fit](images/Mandibug.png)
+
+^ You notice the star on its back and the star on the switch are similar and,
+mostly without engaging your brain, you use the ground pound. Success!
+
+---
+
+# The Star Is a Signal
+
+^ The star is a signal. It's telling us something. Something we know we can do
+without being told explicitly "Come and ground pound this."
+
 ---
 
 # Affordance
 
-^ Perceptual psychologist James Gibson coined the term affordance in 1966. He used it do describe how an actor (person, animal etc) would see the actional properties of the world around them. Part of nature: not necessarily visible. Open terrain affords running. Trees afford hiding. They afford climbing. They might afford sustenance to some actors (not necessarily visible!)
+^ Perceptual psychologist James Gibson coined the term affordance in 1966. He used it do describe how an actor (person, animal etc) would see the actional properties of the world around them. Part of nature of the thing: not necessarily visible. Open terrain affords running. Trees afford hiding. They afford climbing. They might afford sustenance to some actors (not necessarily visible!)
 
 ---
 
 ![](images/cat-tree.jpg)
 
+^ A big cat sees a tree as a thing it can use to hide in, or hunt from, or just
+sleep on. It doesn't see it as a source of food.
+
 ---
 
 ![](images/bird-tree.jpg)
+
+^ Meanwhile, this bird sees it as something it can nest in, but also as a buffet.
+The insects line it.
 
 ---
 
 ![](images/sloth-tree.jpg)
 
+^ The sloth. Well the sloth sees the tree as a hammock.
+
 ---
 
 ![](images/sloth-face.jpg)
 
+^ Note: the sloth seems happiest.
+
 ---
 
+# The tree didn't tell them a thing.
+
+^ As affordance, the tree hasn't said anything. It just exists and their own
+knowledge and experience leads the animals to their behaviour. It's almost implicit.
+
+---
+
+# APIs tho?
+
+![](images/api-cat.jpg)
+
+^ Okay, what does this have to do with APIs though? A lot. Give me another few minutes
+and we'll get back around to it.
+
+---
 
 # Perceived Affordance
 
-^ Don Norman appropriated the term for his book, "The Psychology of Everyday Things". He later clarified that he should have used "Perceived Affordance" as his term of art: designers care that someone perceives something is possible more than whether it is.
+^ Don Norman appropriated the term for his book, "The Psychology of Everyday Things" (1988). He later clarified that he should have used "Perceived Affordance" as his term of art.
+
+---
+
+![original](images/pushpulldoors.jpg)
+
+^ The book, later renamed "The Design of everyday things". It argues for example
+that if you've ever experience a set of doors like this where the action needed
+and the action perceived are different it's BAD DESIGN. Not user error.
+
+---
+
+# Perception of Affordance
+
+^ Designers care that someone perceives something is possible, and make it so.
 
 ^ To draw the line between affordance and perceived affordance, he has argued, for example, that a button on a computer screen affords touching, whether the computer is a touch-screen or not. But what we might care about is whether we believe touching the button will cause an action, and what action that will be.
 
@@ -99,6 +192,13 @@ theme: Ostrich, 1
 
 ---
 
+
+![right fit](images/fielding.jpg)
+
+^ Anyone know who this is?
+
+---
+
 # Roy Fielding
 
 ![right fit](images/fielding.jpg)
@@ -125,7 +225,15 @@ theme: Ostrich, 1
 # rep·re·sen·ta·
 # tion·al
 
-^ Aside: if you look up a word in a dictionary it often has these dots. They don't represent pronounciation. They're actually hinted places to take line breaks in constrained media (YMMV per dictionary). You might call that an affordance, if you knew what they were for.
+^ Aside: if you look up a word in a dictionary it often has these dots. They don't represent pronounciation or syllables. They're actually hinted places to take line breaks in constrained media (YMMV per dictionary). You might call that an affordance, if you knew what they were for.
+
+---
+
+# Fielding and Hypermedia
+
+> "What needs to be done to make the REST architectural style clear on the notion that hypertext is a constraint?"
+
+^ There are a few reasons for that but the most obvious is that REST is defined as a system for distributed hypermedia. The whole thing hinges on it. As Fielding has said many times, Hypermedia Is A Constraint. So... what is it?
 
 ---
 
@@ -151,7 +259,17 @@ theme: Ostrich, 1
 
 ---
 
-# Example pls
+## Action contextualises Information contextualises Action
+
+^ Let's say it again: the things you want to say make more sense when
+they are contextualised by the actions you can take on theme. I can say that you
+have £100 in your account and offer you the ability to transfer it. That contextualises
+the money. It's yours to change in particular ways. If you transfer £30, then I can
+contextualise that transfer by saying you now have £70.
+
+---
+
+# Codez Example pls
 
 ![](images/curious-cat.jpg)
 
@@ -200,13 +318,13 @@ theme: Ostrich, 1
 ![fit original](images/text-adventure.gif)
 
 ^ If you ever played an old text adventure, there will usually a bunch of standard verbs you could use
-against the nouns. But these were domain specific. "Go north", "turn wheel", "kill dragon"
+against the nouns. These were often domain specific. "Go north" was fairly generic, "light fire" might make sensible in an RPG or in something else with fire, "kill dragon" makes sense if you can kill
 
 ---
 
 ![](images/kill-jester.jpg)
 
-^ "kill-jester"
+^ "kill-jester" always makes sense
 
 ---
 
@@ -214,7 +332,7 @@ against the nouns. But these were domain specific. "Go north", "turn wheel", "ki
 
 ![](images/sloth-tree.jpg)
 
-^ It's fine to use domain specific verbs and nouns to describe affordances. It's okay to expect agents to only understand the controls you're offering alongside the information if thye understand the domain itself.
+^ It's fine to use domain specific verbs and nouns to describe affordances. It's okay to expect agents to only understand the controls you're offering alongside the information if they understand the domain itself. You can't expect a sloth to understand killing dragons, but they do understand trees.
 
 ---
 
@@ -223,7 +341,15 @@ against the nouns. But these were domain specific. "Go north", "turn wheel", "ki
 ![fit ](images/echo.png)
 
 ^ A good way of finding those verbs and nouns is imagining a voice interface. How would you want to ask
-Siri/Alexa to do what you want to do? Offer *that* to your users alongside the info.
+Siri/Alexa to do what you want to do?
+Offer *that* to your users alongside the info.
+
+---
+
+> Alexa transfer £30 to Gary for beer
+
+![fit ](images/echo.png)
+
 
 ---
 
