@@ -346,7 +346,7 @@ Offer *that* to your users alongside the info.
 
 ---
 
-> Alexa transfer £30 to Gary for beer
+> Alexa buy a hoppy beer for Gary
 
 ![fit ](images/echo.png)
 
@@ -418,7 +418,9 @@ then we don't need versions. We just change the affordance we make available.
 
 ---
 
-![](images/cats-freaked.jpg)
+# NO VERSION?
+
+![original](images/cats-freaked.jpg)
 
 ^ Now I know some of you will be freaked out by this. Surely we need versions to keep everything working?
 How will we know what we can do?
