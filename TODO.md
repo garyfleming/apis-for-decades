@@ -16,3 +16,5 @@
 * Anything of use in this response about REST not being SOAP and RPC being fine for RPCy stuff? https://philsturgeon.uk/api/2017/12/18/rest-confusion-explained/
 * Add this jabe quote to the affordance caveat: https://twitter.com/cyetain/status/955506555105042432
 * Jabe: designing away complexity https://twitter.com/cyetain/status/955504793321136129
+* More on forms. Current version skips way too much. First that "form" as in web page device and "form" as in shape of a thing are intentionally similar. Talk more about the affordance provided by describing some form of the shape of the thing expected. Visualise it by showing an actual form.
+* More on how to actually implement a client using domain knowledge rather than fixed links. What would that look like?
