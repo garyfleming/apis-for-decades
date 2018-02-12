@@ -21,5 +21,6 @@ Newest to oldest:
 # Links and Resources
 
 * [Hypermedia APIs - Jon Moore](https://vimeo.com/20781278) - The first place I saw someone suggest using a "hypermedia-aware" media type (XHTML, in this case). This is from back in 2010.
+* [Building Hypermedia APIs with HTML](https://www.infoq.com/presentations/web-api-html) - A second video by Jon Moore from around 2013.
 * [The world is poorly designed. But copy nature helps](https://www.youtube.com/watch?v=iMtXqTmfta0) - Video on Biomimicry. In particular, this covers the Bullet Train redesign inspired by the Kingfisher.
 * [How Buildings Learn Pt. 3: "Built for Change"](https://www.youtube.com/watch?v=ZSaWdp833YM) - Video on designing for change. This episode is stand-alone, but the other parts are also very interesting.
