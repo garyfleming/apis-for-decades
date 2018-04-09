@@ -437,6 +437,14 @@ with ease.
 
 ---
 
+# Change Is Inevitable So Change
+
+^ Change is inevitable, so prepare for it. Expect it. Don't want.
+Build for change. Think about how you'd build robustness when you know
+the world will change.
+
+---
+
 # PART III: Testing
 
 ![](images/car.jpg)
@@ -513,9 +521,23 @@ own usage.
 
 # The Forms of Things
 
-^ So we want APIs that have affordance in terms of hypermedia. There are different kinds of hypermedia control that act as affordance.
-Hyperlinks act as ways of moving between data, as connection (where that connection could have meaning). But there's this other affordance we care about where we want (lightweight?) ways of knowing the structure of resources we want to talk about. i.e. a Person has a name which is text, an age that is a number > 0, etc
+![original](images/statue.jpg)
 
+^ So we want APIs that have affordance in terms of hypermedia. There are different kinds of hypermedia control that act as affordance.
+Hyperlinks act as ways of moving between data, as connection (where that connection could have meaning). But there's this other affordance we care about where we want (lightweight?) ways of knowing the structure of resources we want to talk about.
+
+---
+
+# Example: Person
+
+* Given Name
+* Family Name
+* Email
+* Birth Date
+* Address
+
+^ a Person has a name which is text, an age that is represented by a date, etc
+It's vital that we understand the form of a thing.
 
 ---
 
@@ -523,15 +545,28 @@ Hyperlinks act as ways of moving between data, as connection (where that connect
 
 ^ JSON, natively, doesn't have a hypermedia link type. Various standards exist to try to patch that in, but it's missing. JSON doesn't have forms. Various standards exist to try to patch that in (but are shonkier).
 
+---
+
+# HTML5 has it All
+
+![fit](images/html5.png)
 
 ---
 
 # HTML5 has it All
 
-^ It has everything you'd want. Links, forms, types, structures, great tooling.
-An HTML5 API is its own tooling! Point a browser at it and it'll work just fine.
+![fit](images/html5.png)
 
-^ Am I seriously arguing for it? Hmmm... maybe... dunno. What argument would you have against it?
+[.build-lists: true]
+
+* Links
+* Forms
+* Structures
+* Types
+* Tooling
+
+^ It has everything you'd want. Links (we call them links), forms (called forms), structures (lists, maps/dicts etc), types (microdata), great tooling.
+An HTML5 API is its own tooling! Point a browser at it and it'll work just fine.
 
 ---
 
@@ -540,13 +575,24 @@ An HTML5 API is its own tooling! Point a browser at it and it'll work just fine.
 ![](images/web-page.png)
 
 ^ Those links, the forms, the domain knowledge. You deal with it every single day. GitHub **is** an API. It's an
-interactive toolset. You have domain knowledge. You can figure it out.
+interactive toolset.
+You have domain knowledge. You can figure it out.
+^ The simultaneous presentation of information that is part of a domain that you understand, and the controls to manipulate that information affords you the ability to act robustly.
 
 ---
 
 # Write Your APIs using HTML5
 
 ![fit](images/html5.png)
+
+---
+
+# FOR SRS?
+
+![original right](images/shocked-cat.jpg)
+
+^ Am I seriously arguing for it? Hmmm... maybe... dunno. What argument would you have against it?
+This talk is about thinking and ideas. So other than "that's not what we do", why not? How would you make it robust?
 
 ---
 
@@ -574,3 +620,5 @@ interactive toolset. You have domain knowledge. You can figure it out.
 ## @garyfleming
 
 ## github.com/garyfleming/apis-for-decades/
+
+^ The github repo has links and resources including some videos of people building hypermedia aware APIs. They're XHTML based, because they're a little older, but HTML5 is the way to go.
