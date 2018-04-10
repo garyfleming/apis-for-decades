@@ -547,6 +547,20 @@ It's vital that we understand the form of a thing.
 
 ---
 
+# XML Was Problematic
+
+[.build-lists: true]
+
+* Verbose
+* No real structures
+* Arbitrarily complex and extensible
+* etc
+
+^ verbose, no structures in the data structures sense, namespaces and complexity could make it hard to reason about.
+But it was better than the proprietary, closed standards that came before it.
+
+---
+
 # HTML5 has it All
 
 ![fit](images/html5.png)
