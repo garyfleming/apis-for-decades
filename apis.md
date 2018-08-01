@@ -608,16 +608,6 @@ You have domain knowledge. You can figure it out.
 ^ Am I seriously arguing for it? Hmmm... maybe... dunno. What argument would you have against it?
 This talk is about thinking and ideas. So other than "that's not what we do", why not? How would you make it robust?
 
----
-
-[.build-lists: true]
-
-# Summary
-
-* Floppy disks are now a trick we play on each other,
-* Sloths get trees in a profound way,
-* Links and forms make APIs readable documentation, that are testable and changeable,
-* HTML 5 is a rock solid real-world example.
 
 ---
 
