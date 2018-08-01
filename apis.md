@@ -37,6 +37,12 @@ the future. They wanted to create an API that would last a long time
 
 ---
 
+# Network APIs vs Interface APIs
+
+^ Define each. Mostly I'll be talking about the former. A lot of what I say applies to both, but I'm going to assume we're talking about exposing systems over a network.
+
+---
+
 [.build-lists: true]
 
 # What do we want in an API?
@@ -322,7 +328,7 @@ against the nouns. These were often domain specific. "Go north" was fairly gener
 
 ---
 
-![](images/kill-jester.jpg)
+![](images/kill-jester-2.png)
 
 ^ "kill-jester" always makes sense
 
@@ -558,6 +564,12 @@ It's vital that we understand the form of a thing.
 
 ^ verbose, no structures in the data structures sense, namespaces and complexity could make it hard to reason about.
 But it was better than the proprietary, closed standards that came before it.
+
+---
+
+## What solves the problem?
+
+^ What solves the problems of both XML and JSON?
 
 ---
 
