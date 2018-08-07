@@ -272,7 +272,15 @@ and the action perceived are different it's BAD DESIGN. Not user error.
 
 ---
 
+[.build-lists: true]
+
 ## Action contextualises Information contextualises Action
+
+* $100. Want to transfer (up to $100)?
+* $70
+* $30. Want to transfer (up to $30)?
+* 30
+* $0. Nothing left to transfer ☹️
 
 ^ Let's say it again: the things you want to say make more sense when
 they are contextualised by the actions you can take on theme. I can say that you
