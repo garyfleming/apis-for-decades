@@ -296,21 +296,6 @@ contextualise that transfer by saying you now have £70.
 
 ---
 
-[.build-lists: true]
-
-# Collections
-
-* Next, previous, start, end
-* Filter
-* Sort By...
-* Group By...
-
-^ This is the most common place you'll see controls in REST, because it's conceptually simple, very generic, and makes life easier for integrators.
-
-^ When we have large data sets we want to share with the world, we often don't want to just do a huge data dump. We use affordances to offer options for navigating through datasets.
-
----
-
 # HAL-style
 
 ```javascript
@@ -325,6 +310,75 @@ contextualise that transfer by saying you now have £70.
 ```
 
 ^ This is just a quick syntax example. I don't think I've seen any "standard" JSON syntax for this that I particularly like, but some are better than others.
+
+---
+
+# Collection
+
+`/cats`
+
+😿😸🐈😹😺😻😼😽😾🙀🐱
+
+🐈😹😺😻😼😽😾🙀🐱🐈😹
+
+😻😼😽😾🙀🐱🐈😹😺😻😼
+
+😻😼😽😾🙀🐱😿😸🐈😹😺
+
+^ This is the most common place you'll see controls in REST, because it's conceptually simple, very generic, and makes life easier for integrators.
+
+^ When we have large data sets we want to share with the world, we often don't want to just do a huge data dump. We use affordances to offer options for navigating through datasets.
+
+---
+
+# Collection (navigate)
+
+`/cats`
+
+Start/**Self**: 😿😸🐈😹😺😻😼😽😾🙀🐱
+
+Next: 🐈😹😺😻😼😽😾🙀🐱🐈😹
+
+(no direct link) 😻😼😽😾🙀🐱🐈😹😺😻😼
+
+End: 😻😼😽😾🙀🐱😿😸🐈😹😺
+
+---
+
+# Collection (navigate 2)
+
+`/cats?page=2`
+
+Start/Prev: 😿😸🐈😹😺😻😼😽😾🙀🐱
+
+**Self**: 🐈😹😺😻😼😽😾🙀🐱🐈😹
+
+Next: 😻😼😽😾🙀🐱🐈😹😺😻😼
+
+End: 😻😼😽😾🙀🐱😿😸🐈😹😺
+
+---
+
+# Filter
+
+`/cats?eyes=tears`
+
+Start/**Self**/End: 😿😹😹😹😹😿😹
+
+---
+
+# Sort
+
+`/cats?sort=orientation`
+
+Start/**Self**: 🐈🐈🐈🐈🐈😿😸😹😺😻😼
+
+Next: 😽😾🙀🐱😹😺😻😼😽😾🙀
+
+(no direct link): 🐱😹😻😼😽😾🙀🐱😹😺😻
+
+End: 😼😻😼😽😾🙀🐱😿😸😹😺
+
 
 ---
 
