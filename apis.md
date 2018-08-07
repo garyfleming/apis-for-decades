@@ -25,7 +25,19 @@ statement. How do we change this? How do we make it not regrettable?
 
 ---
 
+# Really. Think.
+
+![](images/thinking.jpg)
+
 ^ Really. If we can achieve anything to do, I'd like it to be that we can accept that our API designs to date are not perfect (nothing is), and that with a little time and, crucially, thinking we can improve them just a little bit.
+
+---
+
+# Network APIs vs Interface APIs
+
+![](images/ethernet.jpg)
+
+^ Define each. Mostly I'll be talking about the former. A lot of what I say applies to both, but I'm going to assume we're talking about exposing systems over a network.
 
 ---
 
@@ -35,11 +47,6 @@ statement. How do we change this? How do we make it not regrettable?
 making changing it a pain. When they do replace it, they want it to be easier in
 the future. They wanted to create an API that would last a long time
 
----
-
-# Network APIs vs Interface APIs
-
-^ Define each. Mostly I'll be talking about the former. A lot of what I say applies to both, but I'm going to assume we're talking about exposing systems over a network.
 
 ---
 
@@ -169,7 +176,7 @@ and the action perceived are different it's BAD DESIGN. Not user error.
 
 ^ Designers care that someone perceives something is possible, and make it so.
 
-^ To draw the line between affordance and perceived affordance, he has argued, for example, that a button on a computer screen affords touching, whether the computer is a touch-screen or not. But what we might care about is whether we believe touching the button will cause an action, and what action that will be.
+^ To draw the line between affordance and perceived affordance: Imagine a button on a computer screen, he has argued, for example, that a button on a computer screen affords touching, whether the computer is a touch-screen or not. But what we might care about is whether we believe touching the button will cause an action, and what action that will be.
 
 ---
 
