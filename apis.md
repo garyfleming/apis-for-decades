@@ -105,12 +105,16 @@ mostly without engaging your brain, you use the ground pound. Success!
 
 # The Star Is a Signal
 
+![](images/star-signal.jpg)
+
 ^ The star is a signal. It's telling us something. Something we know we can do
 without being told explicitly "Come and ground pound this."
 
 ---
 
 # Affordance
+
+![](images/forest.jpg)
 
 ^ Perceptual psychologist James Gibson coined the term affordance in 1966. He used it do describe how an actor (person, animal etc) would see the actional properties of the world around them. Part of nature of the thing: not necessarily visible. Open terrain affords running. Trees afford hiding. They afford climbing. They might afford sustenance to some actors (not necessarily visible!)
 
@@ -143,6 +147,8 @@ The insects line it.
 ---
 
 # The tree didn't tell them a thing.
+
+![](images/love-tree.jpg)
 
 ^ As affordance, the tree hasn't said anything. It just exists and their own
 knowledge and experience leads the animals to their behaviour. It's almost implicit.
