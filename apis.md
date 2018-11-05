@@ -325,6 +325,12 @@ contextualise that transfer by saying you now have £70.
 
 ---
 
+# Generic Controls
+
+^ These are really generic collection affordances. It doesn't matter what the underlying items are, the affordances should work. REST puts a lot of emphasise on standard controls when possible.
+
+---
+
 # Collection
 
 `/cats`
@@ -347,13 +353,11 @@ contextualise that transfer by saying you now have £70.
 
 `/cats`
 
-Start/**Self**: 😿😸🐈😹😺😻😼😽😾🙀🐱
+😿😸🐈😹😺😻😼😽😾🙀🐱
 
-Next: 🐈😹😺😻😼😽😾🙀🐱🐈😹
-
-(no direct link) 😻😼😽😾🙀🐱🐈😹😺😻😼
-
-End: 😻😼😽😾🙀🐱😿😸🐈😹😺
+* Self
+* Start or End
+* Next
 
 ---
 
@@ -361,13 +365,12 @@ End: 😻😼😽😾🙀🐱😿😸🐈😹😺
 
 `/cats?page=2`
 
-Start/Prev: 😿😸🐈😹😺😻😼😽😾🙀🐱
+🐈😹😺😻😼😽😾🙀🐱🐈😹
 
-**Self**: 🐈😹😺😻😼😽😾🙀🐱🐈😹
-
-Next: 😻😼😽😾🙀🐱🐈😹😺😻😼
-
-End: 😻😼😽😾🙀🐱😿😸🐈😹😺
+* Self
+* Start or End
+* Prev or Next
+* End
 
 ---
 
@@ -375,7 +378,10 @@ End: 😻😼😽😾🙀🐱😿😸🐈😹😺
 
 `/cats?eyes=tears`
 
-Start/**Self**/End: 😿😹😹😹😹😿😹
+😿😹😹😹😹😿😹
+
+* Self
+* Start or End
 
 ---
 
@@ -383,20 +389,22 @@ Start/**Self**/End: 😿😹😹😹😹😿😹
 
 `/cats?sort=orientation`
 
-Start/**Self**: 🐈🐈🐈🐈🐈😿😸😹😺😻😼
+🐈🐈🐈🐈🐈😿😸😹😺😻😼
 
-Next: 😽😾🙀🐱😹😺😻😼😽😾🙀
-
-(no direct link): 🐱😹😻😼😽😾🙀🐱😹😺😻
-
-End: 😼😻😼😽😾🙀🐱😿😸😹😺
-
+* Self
+* Start or End
+* Next
 
 ---
 
-# Generic
+# Why generic controls?
 
-^ These are really generic collection affordances. It doesn't matter what the underlying items are, the affordances should work. REST puts a lot of emphasise on standard controls when possible.
+* Standardised across collections
+* Surprisingly poorly implemented by clients
+* Easy burden to take on
+
+^ Standardised controls are a good thing. Same paging model across multiple collections.
+People routinely get paging wrong at the client side. Do it once. Do it right. Do it for them.
 
 ---
 
@@ -430,12 +438,6 @@ against the nouns. These were often domain specific. "Go north" was fairly gener
 ^ A good way of finding those verbs and nouns is imagining a voice interface. How would you want to ask
 Siri/Alexa to do what you want to do?
 Offer *that* to your users alongside the info.
-
----
-
-> Alexa buy a hoppy beer for Gary
-
-![fit ](images/echo.png)
 
 ---
 
@@ -495,6 +497,7 @@ constantly change.
 ^ There was no owl v2. Or v3. Instead we had simple birds becoming more specialised over Time
 until we had the owls we have today. The owls in a millenium from now will be different. They'll still
 be owls.
+Lots of small variations. Failures easily disappear.
 
 ---
 
@@ -521,6 +524,17 @@ How will we know what we can do?
 ^ You visit web pages and deal with the links they throw up. You never concern yourself with whether you're viewing google V1, v2, or v1000000.
 You care about how you can apply your domain knowledge to the information and controls you can see. You do it
 with ease.
+
+---
+
+# No AI Required
+
+![](images/robot.jpg)
+
+> Which domain concepts, domain controls, and generic controls that you get back will let you progress your task?
+> This is basic matching. A switch statement at most.
+
+^ One of the last times I gave this talk, someone thought I meant we should be building AI clients who can understand at a human-level. That is not what I mean.
 
 ---
 
