@@ -178,6 +178,12 @@ and the action perceived are different it's BAD DESIGN. Not user error.
 
 ---
 
+![original fit](images/chain-fork.jpg)
+
+^ There's a greek architect, Katerina Kamprani, who has a collection of intentionally awkward objects, called The Uncomfortable. Go look at that if you want to see more examples of affordance gone awry.
+
+---
+
 # Perception of Affordance
 
 ^ Designers care that someone perceives something is possible, and make it so.
