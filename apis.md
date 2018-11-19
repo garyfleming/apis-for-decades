@@ -17,6 +17,16 @@ statement. How do we change this? How do we make it not regrettable?
 
 ---
 
+# Why are they regrettable?
+
+* Hard to see how to use,
+* Assumptions that turn out to be wrong,
+* Poorly explained domain concepts.
+
+^ Lots of reasons. Here are a prime few.
+
+---
+
 ^  Okay, so I want to talk a bit about some thoughts that I've been mulling over for a few years now on the subject of API design. "A few years" might make you think that I've got some answers to share or some unique insight; so let me start by dissuading you. I don't. There are probably some good ideas in here, and some that are a waste of time.
 
 ---
@@ -33,7 +43,7 @@ statement. How do we change this? How do we make it not regrettable?
 
 ---
 
-# Network APIs vs Interface APIs
+# Web APIs vs Code APIs
 
 ![](images/ethernet.jpg)
 
@@ -50,14 +60,13 @@ the future. They wanted to create an API that would last a long time
 
 ---
 
-[.build-lists: true]
-
-# What do we want in an API?
-
 * Machine and human readable
 * Changeable
-* Testable
-* Documented
+* Easy to Navigate
+* Easy to Update Data
+* Lightweight Structures
+* Optional Types
+* Existing tooling
 
 ^ So I asked a number of developers what makes a good API. I got a lot of different
 answers but these were the most common answers.
@@ -114,6 +123,8 @@ without being told explicitly "Come and ground pound this."
 
 # Affordance
 
+### How an actor sees the actional properties of the world
+
 ![](images/forest.jpg)
 
 ^ Perceptual psychologist James Gibson coined the term affordance in 1966. He used it do describe how an actor (person, animal etc) would see the actional properties of the world around them. Part of nature of the thing: not necessarily visible. Open terrain affords running. Trees afford hiding. They afford climbing. They might afford sustenance to some actors (not necessarily visible!)
@@ -155,9 +166,9 @@ knowledge and experience leads the animals to their behaviour. It's almost impli
 
 ---
 
-# APIs tho?
+## APIs tho?
 
-![](images/api-cat.jpg)
+![original](images/api-cat.jpg)
 
 ^ Okay, what does this have to do with APIs though? A lot. Give me another few minutes
 and we'll get back around to it.
@@ -166,31 +177,18 @@ and we'll get back around to it.
 
 # Perceived Affordance
 
-^ Don Norman appropriated the term for his book, "The Psychology of Everyday Things" (1988). He later clarified that he should have used "Perceived Affordance" as his term of art.
+^ Don Norman appropriated the term for his book, "The Psychology of Everyday Things" (1988) (Later "Design of..."). He later clarified that he should have used "Perceived Affordance" as his term of art.
 
 ---
 
 ![original](images/pushpulldoors.jpg)
 
-^ The book, later renamed "The Design of everyday things". It argues for example
-that if you've ever experience a set of doors like this where the action needed
-and the action perceived are different it's BAD DESIGN. Not user error.
+^ It argues for example that if you've ever experience a set of doors like this where the action needed and the action perceived are different it's BAD DESIGN. Not user error.
+
 
 ---
 
-![original fit](images/chain-fork.jpg)
-
-^ There's a greek architect, Katerina Kamprani, who has a collection of intentionally awkward objects, called The Uncomfortable. Go look at that if you want to see more examples of affordance gone awry.
-
----
-
-# Perception of Affordance
-
-^ Designers care that someone perceives something is possible, and make it so.
-
-^ To draw the line between affordance and perceived affordance: Imagine a button on a computer screen, he has argued, for example, that a button on a computer screen affords touching, whether the computer is a touch-screen or not. But what we might care about is whether we believe touching the button will cause an action, and what action that will be.
-
----
+### Perceived Affordance
 
 ![inline](images/floppy-disk.png)
 
@@ -211,16 +209,56 @@ and the action perceived are different it's BAD DESIGN. Not user error.
 
 ---
 
+> The Uncomfortable
+
+![original fit](images/chain-fork.jpg)
+
+^ There's a greek architect, Katerina Kamprani, who has a collection of intentionally awkward objects, called The Uncomfortable. Go look at that if you want to see more examples of affordance gone awry.
+
+---
+
 # Caveat!
 
 ^ To be clear, I'm skimming the surface and slightly misusing "affordance" for the sake of simplicity. Please feel free to read more.
 
 ---
 
+# Part 2: The Form of Things
 
-![right fit](images/fielding.jpg)
+^ Before we can go too far into anything else, we need to have a common language.
 
-^ Anyone know who this is?
+---
+
+![original](images/statue.jpg)
+
+^ Things have shape. Things have structure. Things have form. It's important that when we discuss items, especially in software domains, we're referencing the same things when we use the same words.
+
+---
+
+# Example: Cat 😽
+
+* Given Name
+* Family Name
+* Birth Date
+* Address
+
+^ a Cat has a name which is text, an age that is represented by a date, etc
+It's vital that we understand the form of a thing.
+
+---
+
+# Eyes
+
+* 😼 Normal,
+* 😿 Tears,
+* 😻 Lovehearts,
+* 🙀 Shocked
+
+^ We might, in our domain, care about something odd like the state of the cats eyes, for example. We'd need to be sure that everyone else we spoke to knew that somehow. That we could describe that.
+
+---
+
+# Part 3: No rest for the wicked
 
 ---
 
@@ -254,11 +292,11 @@ and the action perceived are different it's BAD DESIGN. Not user error.
 
 ---
 
-# Fielding and Hypermedia
+# Back to REST
 
 > "What needs to be done to make the REST architectural style clear on the notion that hypertext is a constraint?"
 
-^ There are a few reasons for that but the most obvious is that REST is defined as a system for distributed hypermedia. The whole thing hinges on it. As Fielding has said many times, Hypermedia Is A Constraint. So... what is it?
+^ Fielding says several interesting things about REST that everyone doing "REST" basically ignores.
 
 ---
 
@@ -266,7 +304,7 @@ and the action perceived are different it's BAD DESIGN. Not user error.
 
 > "... the simultaneous presentation of information and controls such that the information becomes the **affordance** through which the user [...] obtains choices and selects actions."
 
-^ Do we see the callback there that I so subtly placed a while back? The mechanisms to control information presented AS the information is the pretty radical thing that REST is built around. It's not the only thing, but affordance is really high up the list.
+^ Hypertext is essential..
 
 ---
 
@@ -278,7 +316,7 @@ and the action perceived are different it's BAD DESIGN. Not user error.
 
 ---
 
-# Information + Controls = Better API
+### Information + Controls = Better API
 
 ^ Let's make this clear. You put your mechanisms for controlling your API into the information returned by your API. You don't separate them out.
 
@@ -302,30 +340,14 @@ contextualise that transfer by saying you now have £70.
 
 ---
 
-# Codez Example pls
+# Examples plz
 
 ![](images/curious-cat.jpg)
 
 ---
 
-# HAL-style
+# Generic vs Specific Controls
 
-```javascript
-{
-  "items": {
-    ...
-  }
-    "_links": {
-        "next": { "href": "/page=2" }
-    }
-}
-```
-
-^ This is just a quick syntax example. I don't think I've seen any "standard" JSON syntax for this that I particularly like, but some are better than others.
-
----
-
-# Generic Controls
 
 ^ These are really generic collection affordances. It doesn't matter what the underlying items are, the affordances should work. REST puts a lot of emphasise on standard controls when possible.
 
@@ -357,6 +379,7 @@ contextualise that transfer by saying you now have £70.
 
 * Self
 * Start or End
+* [non-paging controls]
 * Next
 
 ---
@@ -370,7 +393,7 @@ contextualise that transfer by saying you now have £70.
 * Self
 * Start or End
 * Prev or Next
-* End
+* [non-paging controls]
 
 ---
 
@@ -380,8 +403,8 @@ contextualise that transfer by saying you now have £70.
 
 😿😹😹😹😹😿😹
 
-* Self
-* Start or End
+* [paging controls]
+* Eyes=<some eye type>
 
 ---
 
@@ -391,9 +414,8 @@ contextualise that transfer by saying you now have £70.
 
 🐈🐈🐈🐈🐈😿😸😹😺😻😼
 
-* Self
-* Start or End
-* Next
+* [other paging controls]
+* sort=<some criteria>
 
 ---
 
@@ -408,7 +430,7 @@ People routinely get paging wrong at the client side. Do it once. Do it right. D
 
 ---
 
-# Text Adventures
+# Specific: Text Adventures
 
 ![fit original](images/text-adventure.gif)
 
@@ -417,17 +439,10 @@ against the nouns. These were often domain specific. "Go north" was fairly gener
 
 ---
 
-![](images/kill-jester-2.png)
+## Domain Knowledge is OK
+## 😿 -> 😸
 
-^ "kill-jester" always makes sense
-
----
-
-# Domain Knowledge is Okay
-
-![](images/sloth-tree.jpg)
-
-^ It's fine to use domain specific verbs and nouns to describe affordances. It's okay to expect agents to only understand the controls you're offering alongside the information if they understand the domain itself. You can't expect a sloth to understand killing dragons, but they do understand trees.
+^ It's fine to use domain specific verbs and nouns to describe affordances. It's okay to expect agents to only understand the controls you're offering alongside the information if they understand the domain itself. Updating a cats eyes to be wiped makes sense for a cat.
 
 ---
 
@@ -447,7 +462,7 @@ Offer *that* to your users alongside the info.
 
 ---
 
-# Part II: Change
+# Part 4: Change
 
 ^ One of the other things people wanted was for things to be safe to change. How do we do that?
 
@@ -527,17 +542,6 @@ with ease.
 
 ---
 
-# No AI Required
-
-![](images/robot.jpg)
-
-> Which domain concepts, domain controls, and generic controls that you get back will let you progress your task?
-> This is basic matching. A switch statement at most.
-
-^ One of the last times I gave this talk, someone thought I meant we should be building AI clients who can understand at a human-level. That is not what I mean.
-
----
-
 # Change Is Inevitable So Change
 
 ^ Change is inevitable, so prepare for it. Expect it. Don't want.
@@ -546,7 +550,7 @@ the world will change.
 
 ---
 
-# PART III: Testing
+# PART 5: Testing
 
 ![](images/car.jpg)
 
@@ -590,55 +594,28 @@ Force them to think in affordance.
 
 ---
 
-# PART IV: A NEW OLD API
+# PART 6: A NEW OLD API
 
 ^ So far I've argued for affordances, presenting information and tests together.
 
 ---
 
-# What do we want in an API?
-
-* Machine and human readable
-* Changeable
-* Testable
-* Documented
-
-^ I've argued as well as I'm going to that APIs that are afforded are changeable,
-and testable. They're documented because they are themselves documentation on their
-own usage.
+* Affordances
+* The Forms of Things
+* Rest being about controls
+* Versioning
+* Testing (if I had time)
 
 ----
 
-# Anything Else We Want?
+# What else do we want?
 
 * Easy to Navigate
 * Easy to Update Data
-* Compressable
 * Lightweight Structures
 * Optional Types
 * Existing tooling
 
----
-
-# The Forms of Things
-
-![original](images/statue.jpg)
-
-^ So we want APIs that have affordance in terms of hypermedia. There are different kinds of hypermedia control that act as affordance.
-Hyperlinks act as ways of moving between data, as connection (where that connection could have meaning). But there's this other affordance we care about where we want (lightweight?) ways of knowing the structure of resources we want to talk about.
-
----
-
-# Example: Person
-
-* Given Name
-* Family Name
-* Email
-* Birth Date
-* Address
-
-^ a Person has a name which is text, an age that is represented by a date, etc
-It's vital that we understand the form of a thing.
 
 ---
 
