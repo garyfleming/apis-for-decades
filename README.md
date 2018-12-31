@@ -24,3 +24,7 @@ Newest to oldest:
 * [Building Hypermedia APIs with HTML](https://www.infoq.com/presentations/web-api-html) - A second video by Jon Moore from around 2013.
 * [The world is poorly designed. But copying nature helps](https://www.youtube.com/watch?v=iMtXqTmfta0) - Video on Biomimicry. In particular, this covers the Bullet Train redesign inspired by the Kingfisher.
 * [How Buildings Learn Pt. 3: "Built for Change"](https://www.youtube.com/watch?v=ZSaWdp833YM) - Video on designing for change. This episode is stand-alone, but the other parts are also very interesting.
+
+# Recordings
+
+* [Dot Net Sheffield](https://www.youtube.com/watch?v=F5kXwWPg-Uw)
