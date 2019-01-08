@@ -573,6 +573,13 @@ APIs have tests so they can change faster.
 
 ^ They can also give the expectations to you, so you can run them when you make changes. Something breaks? Now you know what consumer you need to speak to about how you can progress together.
 
+---
+
+![original fit](images/cdcs.jpg)
+
+^ Few interesting properties. The client tests against the mock service. It sends requests, which the mock service knows how to reply to by looking at the contract. It pattern matches the input to the expected output.
+^ Service gets requests in from the mock client, which is generated from the contract. The client verifys that responses match its expectations.
+
 
 ---
 
