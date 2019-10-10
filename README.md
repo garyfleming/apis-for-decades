@@ -15,6 +15,10 @@ A talk I first gave in November 2017. It was written in Deckset using Markdown.
 
 Newest to oldest:
 
+* [APIs on the Scale of Decades](https://github.com/garyfleming/apis-for-decades/releases/tag/v0.7) - Codemash, Sandusky, Ohio (11/01/19). Minor tweaks, mostly around CDCs.
+* [APIs on the Scale of Decades](https://github.com/garyfleming/apis-for-decades/releases/tag/v0.6) - Oredev, Malmo (20/11/18). A fairly big structural change with a lot of things, like The Form of Things, moving earlier. Some things cut, some added.
+* [APIs on the Scale of Decades](https://github.com/garyfleming/apis-for-decades/releases/tag/v0.5) - DotNetSheff (07/08/2018). Most changes were about generic controls.
+* [APIs on the Scale of Decades](https://github.com/garyfleming/apis-for-decades/releases/tag/v0.4) - Python Glasgow (10/04/18). Fairly small changes around the ideas of forms, and XML.
 * [APIs on the Scale of Decades](https://github.com/garyfleming/apis-for-decades/releases/tag/v0.3) - DDD Scotland (10/02/2018). The first long (40-45 minute) version of the talk.
 * [APIs on the Scale of Decades](https://github.com/garyfleming/apis-for-decades/releases/tag/v0.2) - Lean Agile Glasgow (08/11/17). The first version of the talk. Still short, around 20 minutes.
 
