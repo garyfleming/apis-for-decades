@@ -9,6 +9,16 @@ Writing any old API is easy. Writing an API that can evolve to meet your needs o
 Let me give you some good advice that'll help you evolve your APIs, and some big ideas that might provoke some interesting thoughts.
 
 
+# Short Version (100 char)
+
+Writing any old API is easy. Writing one to last for decades? That's hard. Let's discuss why.
+
+# Key outcomes
+
+* How design and APIs relate, in a wider sense than just the purely technical.
+* How to make APIs that can be evolved over time with just a little effort.
+* Why thinking is a key prerequisite in good API design.
+
 # History
 
 A talk I first gave in November 2017. It was written in Deckset using Markdown.
